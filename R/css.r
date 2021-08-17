@@ -463,7 +463,7 @@ cluster_sim_spectrum.Seurat <- function(object, var_genes = NULL, use_scale = F,
                                       merge_spectrums = merge_spectrums, merge_height_prop = merge_height_prop, spectrum_dist_type = spectrum_dist_type, spectrum_cl_method = spectrum_cl_method,
                                       return_css_only = return_seuratObj, verbose = verbose)
   if (return_seuratObj){
-    object[[reduction.name]] <- CreateDimReducObject(embeddings = css, key = reduction.key, assay = DefaultAssay(object))
+    object[[reduction.name]] <- CreateDimReducObject(embeddings = css$sim2profiles, key = reduction.key, assay = DefaultAssay(object), misc = list(model = css))
     return(object)
   } else{
     return(css)
