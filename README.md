@@ -5,7 +5,7 @@ Installation
 ------
 ```
 install.packages("devtools")
-devtools::install_github("zh542370159/simspec@v1.0.2")
+devtools::install_github("zh542370159/simspec@v1.0.3")
 ```
 
 Usage
